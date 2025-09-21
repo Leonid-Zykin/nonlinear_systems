@@ -1,0 +1,32 @@
+\subsection*{Система 2}
+
+\begin{align}
+\dot{x}_1 &= x_1 + x_1 x_2 \\
+\dot{x}_2 &= -x_2 + x_2^2 + x_1 x_2 - x_1^3
+\end{align}
+
+\textbf{Точки равновесия:}
+\begin{align}
+x_1(1 + x_2) &= 0 \\
+-x_2 + x_2^2 + x_1 x_2 - x_1^3 &= 0
+\end{align}
+
+\textbf{Случай 1:} $x_1 = 0$. Из второго уравнения: $-x_2 + x_2^2 = 0 \Rightarrow x_2(x_2 - 1) = 0$
+\begin{itemize}
+\item $(0, 0)$
+\item $(0, 1)$
+\end{itemize}
+
+\textbf{Случай 2:} $x_2 = -1$. Из второго уравнения: $-(-1) + (-1)^2 + x_1(-1) - x_1^3 = 0 \Rightarrow 2 - x_1 - x_1^3 = 0$
+
+Численное решение: $x_1 \approx 1.26$, $x_2 = -1$
+
+\textbf{Матрица Якоби:}
+$$J = \begin{pmatrix} 1 + x_2 & x_1 \\ -3x_1^2 + x_2 & -1 + 2x_2 + x_1 \end{pmatrix}$$
+
+\textbf{Анализ точек:}
+\begin{itemize}
+\item $(0, 0)$: $J = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}$, $\lambda_1 = 1$, $\lambda_2 = -1$ --- седло
+\item $(0, 1)$: $J = \begin{pmatrix} 2 & 0 \\ 1 & 1 \end{pmatrix}$, $\lambda_1 = 2$, $\lambda_2 = 1$ --- неустойчивый узел
+\item $(1.26, -1)$: $J = \begin{pmatrix} 0 & 1.26 \\ -4.76 & 0.26 \end{pmatrix}$, $\det J = 6 > 0$, $\text{tr} J = 0.26 > 0$ --- неустойчивый фокус
+\end{itemize}

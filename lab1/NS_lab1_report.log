@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.7.13)  8 SEP 2025 11:18
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.7.13)  21 SEP 2025 18:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1458,46 +1458,48 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 16.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [2])
-(./3_analysis.tex [3] [4]
+(./3_analysis.tex [3] [4] [5] [6] [7]
 File: images/phase_portraits/system1_phase_portrait.png Graphic file (type bmp)
 
 <images/phase_portraits/system1_phase_portrait.png>
- [5]
+ [8] [9] [10]
 File: images/phase_portraits/system2_phase_portrait.png Graphic file (type bmp)
 
 <images/phase_portraits/system2_phase_portrait.png>
- [6]
+ [11] [12]
 File: images/phase_portraits/system3_phase_portrait.png Graphic file (type bmp)
 
 <images/phase_portraits/system3_phase_portrait.png>
- [7]
+ [13] [14]
 File: images/phase_portraits/system4_phase_portrait.png Graphic file (type bmp)
 
 <images/phase_portraits/system4_phase_portrait.png>
- [8]
+ [15]
+[16] [17]
 File: images/phase_portraits/system5_phase_portrait.png Graphic file (type bmp)
 
 <images/phase_portraits/system5_phase_portrait.png>
- [9] [10]
+ [18] [19] [20]
 File: images/phase_portraits/system6_phase_portrait.png Graphic file (type bmp)
 
 <images/phase_portraits/system6_phase_portrait.png>
- [11]
-File: images/3d_systems/system7_3d_phase_portrait.png Graphic file (type bmp)
-<images/3d_systems/system7_3d_phase_portrait.png>
-File: images/3d_systems/system7_2d_projections.png Graphic file (type bmp)
-<images/3d_systems/system7_2d_projections.png>
+ [21]
+Missing character: There is no ✓ (U+2713) in font Times New Roman/OT:language=d
+flt;mapping=tex-text;!
+Missing character: There is no ✓ (U+2713) in font Times New Roman/OT:language=d
+flt;mapping=tex-text;!
+Missing character: There is no ✓ (U+2713) in font Times New Roman/OT:language=d
+flt;mapping=tex-text;!
 File: images/limit_cycles/limit_cycles_система_4.png Graphic file (type bmp)
 <images/limit_cycles/limit_cycles_система_4.png>
-)
-(./4_controlled_systems.tex [12] [13] [14]
+) (./4_controlled_systems.tex [22] [23] [24]
 Underfull \hbox (badness 5374) in paragraph at lines 100--101
 []\TU/TimesNewRoman(0)/m/n/14.4 Кратко метод LQR: решаем уравнение Риккати $\OM
 L/cmm/m/it/14.4 A[]P \OT1/cmr/m/n/14.4 + \OML/cmm/m/it/14.4 PA \OMS/cmsy/m/n/14
 .4 ^^@
  []
 
-[15]
+
 Underfull \hbox (badness 2401) in paragraph at lines 110--111
 []\TU/TimesNewRoman(0)/m/n/14.4 Результаты численного моделирования показывают 
 эффективность
@@ -1506,23 +1508,19 @@ Underfull \hbox (badness 2401) in paragraph at lines 110--111
 File: images/controlled_systems/controller_simulation.png Graphic file (type bm
 p)
 <images/controlled_systems/controller_simulation.png>
-) (./5_conclusion.tex [16]
-Underfull \hbox (badness 1603) in paragraph at lines 11--12
-[]\TU/TimesNewRoman(0)/m/n/14.4 Система 2: седло $\OT1/cmr/m/n/14.4 (0\OML/cmm/
-m/it/14.4 ;\OT1/cmr/m/n/14.4 0)$\TU/TimesNewRoman(0)/m/n/14.4 , неустойчивый уз
-ел $\OT1/cmr/m/n/14.4 (0\OML/cmm/m/it/14.4 ;\OT1/cmr/m/n/14.4 1)$ \TU/TimesNewR
-oman(0)/m/n/14.4 и седло
- []
-
-)
+) (./5_conclusion.tex [25] [26] [27])
 
 LaTeX Warning: Empty bibliography on input line 204.
+
+
+Package caption Warning: Unused \captionsetup[subfigure] on input line 85.
+See the caption package documentation for explanation.
 
 
 Package caption Warning: Unused \captionsetup[table] on input line 86.
 See the caption package documentation for explanation.
 
-[17] (./NS_lab1_report.aux)
+[28] (./NS_lab1_report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1534,12 +1532,12 @@ Package logreq Info: Writing requests to 'NS_lab1_report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30124 strings out of 474878
- 576883 string characters out of 5762516
- 1929627 words of memory out of 5000000
- 51763 multiletter control sequences out of 15000+600000
+ 30089 strings out of 474878
+ 575552 string characters out of 5762516
+ 1933627 words of memory out of 5000000
+ 51731 multiletter control sequences out of 15000+600000
  561533 words of font info for 73 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  85i,12n,93p,1159b,3875s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on NS_lab1_report.pdf (17 pages).
+Output written on NS_lab1_report.pdf (28 pages).
