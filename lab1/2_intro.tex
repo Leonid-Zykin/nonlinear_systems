@@ -20,30 +20,13 @@ $$J_{ij} = \frac{\partial f_i}{\partial x_j}\bigg|_{\mathbf{x} = \mathbf{x}^*}$$
 
 Тип точки равновесия определяется собственными значениями матрицы Якоби:
 \begin{itemize}
-\item Все $\text{Re}(\lambda_i) < 0$ --- устойчивая точка
-\item Есть $\text{Re}(\lambda_i) > 0$ --- неустойчивая точка
-\item $\text{Re}(\lambda_i) = 0$ --- критический случай
+\item $\text{Re}(\lambda_i) < 0, \text{Im}(\lambda_i) = 0 $ $\Rightarrow$ устойчивый узел
+\item $\text{Re}(\lambda_i) < 0, \text{Im}(\lambda_i) \neq 0 $ $\Rightarrow$ устойчивый фокус
+\item $\text{Re}(\lambda_i) > 0, \text{Im}(\lambda_i) = 0 $ $\Rightarrow$ неустойчивый узел
+\item $\text{Re}(\lambda_i) > 0, \text{Im}(\lambda_i) \neq 0 $ $\Rightarrow$ неустойчивый фокус
+\item $\text{Re}(\lambda_i) = 0, \text{Im}(\lambda_i) \neq 0 $ $\Rightarrow$ центр
+\item $\lambda_1 < 0 < \lambda_2 $ $\Rightarrow$ седло
 \end{itemize}
-
-\subsubsection*{Классификация точек равновесия}
-
-В зависимости от собственных значений матрицы Якоби различают следующие типы точек равновесия:
-
-\textbf{Узлы:}
-\begin{itemize}
-\item Устойчивый узел: все $\lambda_i$ действительные и отрицательные
-\item Неустойчивый узел: все $\lambda_i$ действительные и положительные
-\end{itemize}
-
-\textbf{Фокусы:}
-\begin{itemize}
-\item Устойчивый фокус: $\lambda_i$ комплексные с отрицательной действительной частью
-\item Неустойчивый фокус: $\lambda_i$ комплексные с положительной действительной частью
-\end{itemize}
-
-\textbf{Седла:} есть как положительные, так и отрицательные действительные части собственных значений
-
-\textbf{Центры:} $\lambda_i$ чисто мнимые (действительная часть равна нулю)
 
 \subsubsection*{Предельные циклы}
 
