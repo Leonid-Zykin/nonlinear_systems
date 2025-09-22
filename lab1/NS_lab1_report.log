@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.2)  22 SEP 2025 00:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.2)  22 SEP 2025 18:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/alyok/Desktop/nonlinear/nonlinear_systems/lab1/NS_lab1_report.tex
-(c:/Users/alyok/Desktop/nonlinear/nonlinear_systems/lab1/NS_lab1_report.tex
+**c:/Users/alyok/Desktop/nonlinear_systems/lab1/NS_lab1_report.tex
+(c:/Users/alyok/Desktop/nonlinear_systems/lab1/NS_lab1_report.tex
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-30>
 (C:\Users\alyok\AppData\Local\Programs\MiKTeX\tex/latex/memoir\memoir.cls
@@ -1493,24 +1493,23 @@ Package pdftex.def Info: images/phase_portraits/system6_phase_portrait.png  used
 [11]
 
 [12 <./images/phase_portraits/system6_phase_portrait.png>]) (4_controlled_systems.tex
+Overfull \hbox (438.86426pt too wide) detected at line 45
+\OML/cmm/m/it/14.4 A \OT1/cmr/m/n/14.4 = [][] = [][] = [] \OML/cmm/m/it/14.4 ; B \OT1/cmr/m/n/14.4 = [][] = [] = [] = [] \OML/cmm/m/it/14.4 :
+ []
+
+
 
 [13]
 
 [14]
-Underfull \hbox (badness 1418) in paragraph at lines 100--101
-[]\T2A/cmr/m/n/14.4 Кратко ме-тод LQR: ре-ша-ем урав-не-ние Рик-ка-ти $\OML/cmm/m/it/14.4 A[]P \OT1/cmr/m/n/14.4 + \OML/cmm/m/it/14.4 PA \OMS/cmsy/m/n/14.4 ^^@
- []
-
-<images/controlled_systems/controller_simulation.png, id=165, 1076.3412pt x 852.5451pt>
+<images/controlled_systems/controller_simulation.png, id=166, 1284.8pt x 1016.79875pt>
 File: images/controlled_systems/controller_simulation.png Graphic file (type png)
 <use images/controlled_systems/controller_simulation.png>
-Package pdftex.def Info: images/controlled_systems/controller_simulation.png  used on input line 114.
-(pdftex.def)             Requested size: 375.57782pt x 297.48465pt.
+Package pdftex.def Info: images/controlled_systems/controller_simulation.png  used on input line 112.
+(pdftex.def)             Requested size: 375.57782pt x 297.2379pt.
+) (5_conclusion.tex
 
-
-[15]) (5_conclusion.tex
-
-[16 <./images/controlled_systems/controller_simulation.png>])
+[15 <./images/controlled_systems/controller_simulation.png>])
 
 LaTeX Warning: Empty bibliography on input line 204.
 
@@ -1524,7 +1523,7 @@ See the caption package documentation for explanation.
 
 
 
-[17] (NS_lab1_report.aux)
+[16] (NS_lab1_report.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2020/03/25>
@@ -1536,17 +1535,17 @@ Package logreq Info: Writing requests to 'NS_lab1_report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29231 strings out of 473898
- 512472 string characters out of 5726479
+ 29230 strings out of 473898
+ 512357 string characters out of 5726479
  1610437 words of memory out of 5000000
- 51621 multiletter control sequences out of 15000+600000
+ 51623 multiletter control sequences out of 15000+600000
  567407 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,12n,93p,1263b,3115s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\alyok\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1200.pk> <C:\Users\alyok\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1440.pk> <C:\Users\alyok\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lati1440.pk> <C:\Users\alyok\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1440.pk><C:/Users/alyok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/alyok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/alyok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/alyok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/alyok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/alyok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/alyok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/alyok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/alyok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/alyok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on NS_lab1_report.pdf (17 pages, 5965569 bytes).
+ 85i,12n,93p,1253b,3115s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\alyok\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1200.pk> <C:\Users\alyok\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1440.pk> <C:\Users\alyok\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lati1440.pk> <C:\Users\alyok\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1440.pk><C:/Users/alyok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/alyok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/alyok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/alyok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/alyok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/alyok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/alyok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/alyok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/alyok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/alyok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/alyok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on NS_lab1_report.pdf (16 pages, 5625855 bytes).
 PDF statistics:
  483 PDF objects out of 1000 (max. 8388607)
- 100 named destinations out of 1000 (max. 500000)
+ 97 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
