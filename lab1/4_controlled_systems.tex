@@ -10,17 +10,17 @@
 
 \subsubsection*{Выбор целевой точки и линеаризация по отклонениям}
 
-Стабилизируем систему к точке вида $(1,y^*)$, где $y^*\in[-2,0]$ (это условие необходимо и достаточно для существования стационарных входов, см. ниже) и $y^*\neq -1$.
-Из условий равновесия $f(1,y^*,u_{ss})=0$ получаем
+Стабилизируем систему к точке вида $(1,x^*)$, где $x^*\in[-2,0]$ (это условие необходимо и достаточно для существования стационарных входов, см. ниже) и $x^*\neq -1$.
+Из условий равновесия $f(1,x^*,u_{ss})=0$ получаем
 \[
-\sin u_{1,ss} = -(1+y^*),\qquad \sin u_{2,ss} = \frac{1+y^*}{3}.
+\sin u_{1,ss} = -(1+x^*),\qquad \sin u_{2,ss} = \frac{1+x^*}{3}.
 \]
-Для конкретики берём $y^*=-1.5$, тогда $u_{1,ss}=\arcsin(0.5)=\pi/6\approx0.524$, $u_{2,ss}=\arcsin(-0.5)= -\pi/6\approx-0.167$.
+Для конкретики берём $x^*=-1.5$, тогда $u_{1,ss}=\arcsin(0.5)=\pi/6\approx0.524$, $u_{2,ss}=\arcsin(-0.5)= -\pi/6\approx-0.167$.
 Линеаризуем систему по отклонениям $\tilde x = x - x^*$ и $v = u - u_{ss}$.
 
 Матрицы Якоби в точке $(x^*,u_{ss})$ имеют вид:
-\[
-A = \left.\frac{\partial f}{\partial x}\right|_{(x^*,u_{ss})} =
+\begin{align*}
+A &= \left.\frac{\partial f}{\partial x}\right|_{(x^*,u_{ss})} =
 \begin{pmatrix}
 -1 + 6x_1^2 & 1 \\
 -1 & -1
@@ -28,8 +28,8 @@ A = \left.\frac{\partial f}{\partial x}\right|_{(x^*,u_{ss})} =
 \begin{pmatrix}
 5 & 1 \\
 -1 & -1
-\end{pmatrix},\qquad
-B = \left.\frac{\partial f}{\partial u}\right|_{(x^*,u_{ss})} =
+\end{pmatrix}, \\
+B &= \left.\frac{\partial f}{\partial u}\right|_{(x^*,u_{ss})} =
 \begin{pmatrix}
 \cos u_{1,ss} & 0 \\
 0 & 3\cos u_{2,ss}
@@ -42,7 +42,7 @@ B = \left.\frac{\partial f}{\partial u}\right|_{(x^*,u_{ss})} =
 0.8660 & 0 \\
 0 & 2.9580
 \end{pmatrix}.
-\]
+\end{align*}
 
 \subsubsection*{Синтез LQR}
 

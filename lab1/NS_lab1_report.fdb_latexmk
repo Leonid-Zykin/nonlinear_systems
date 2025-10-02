@@ -1,16 +1,16 @@
 # Fdb version 4
-["biber NS_lab1_report"] 0 "NS_lab1_report.bcf" "NS_lab1_report.bbl" "NS_lab1_report" 1758553324.39138 0
+["biber NS_lab1_report"] 0 "NS_lab1_report.bcf" "NS_lab1_report.bbl" "NS_lab1_report" 1759390541.60415 0
   "NS_lab1_report.bcf" 0 -1 0 "pdflatex"
   "biba.bib" 0 -1 0 ""
   (generated)
   "NS_lab1_report.bbl"
   "NS_lab1_report.blg"
   (rewritten before read)
-["pdflatex"] 1758553311.84046 "c:/Users/alyok/Desktop/nonlinear_systems/lab1/NS_lab1_report.tex" "NS_lab1_report.pdf" "NS_lab1_report" 1758553324.39244 0
+["pdflatex"] 1759390527.1085 "c:/Users/alyok/Desktop/nonlinear_systems/lab1/NS_lab1_report.tex" "NS_lab1_report.pdf" "NS_lab1_report" 1759390541.60521 0
   "1_title.tex" 1758471935 1464 b6dbdce4d7065f6797e2905d1d45d87d ""
-  "2_intro.tex" 1758472709 3277 d6056cde0769568c548c727621f2819e ""
+  "2_intro.tex" 1758553379 3277 d6056cde0769568c548c727621f2819e ""
   "3_analysis.tex" 1758488189 10271 9f0f60924967b97fba0e843e159c41db ""
-  "4_controlled_systems.tex" 1758529709 4417 a6176fec3d5242d39daa91ce69ada3e2 ""
+  "4_controlled_systems.tex" 1759390525 4553 81f642fc57fe17f3b2b347ba0ccc4c10 ""
   "5_conclusion.tex" 1758488621 1587 eb4576bd9a86ec0f4902158e93912e10 ""
   "C:/Users/alyok/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1758469578 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/alyok/AppData/Local/MiKTeX/fonts/pk/ljfour/lh/lh-t2a/dpi600/labx1440.pk" 1728985001 36852 b7ae18ccb0e37c424904011c06965341 ""
@@ -179,13 +179,13 @@
   "C:/Users/alyok/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/alyok/AppData/Local/Programs/MiKTeX/tex/latex/was/icomma.sty" 1665850770 1018 df058db1896806f044e2233bb506d425 ""
   "C:/Users/alyok/AppData/Local/Programs/MiKTeX/tex/latex/xpatch/xpatch.sty" 1585221260 8510 7803f78066c4f9d008405191a4b43073 ""
-  "NS_lab1_report.aux" 1758553323 2633 0a6080d40e4be5a6e172aec0ad7219ed "pdflatex"
+  "NS_lab1_report.aux" 1759390540 2633 0a6080d40e4be5a6e172aec0ad7219ed "pdflatex"
   "NS_lab1_report.bbl" 0 -1 0 "biber NS_lab1_report"
-  "NS_lab1_report.out" 1758553315 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "NS_lab1_report.run.xml" 1758553323 2633 69f2f216e773cf5623675ae5ac5ac8af "pdflatex"
+  "NS_lab1_report.out" 1759390530 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "NS_lab1_report.run.xml" 1759390540 2633 69f2f216e773cf5623675ae5ac5ac8af "pdflatex"
   "NS_lab1_report.tex" 1758471919 18787 d5ec4b6d26c4f96881e3cd20ba5feff8 ""
   "c:/Users/alyok/Desktop/nonlinear_systems/lab1/NS_lab1_report.tex" 1758471919 18787 d5ec4b6d26c4f96881e3cd20ba5feff8 ""
-  "images/controlled_systems/controller_simulation.png" 1758553310 125117 5e5d12cca4bfc7bc4ee60610c04a1783 ""
+  "images/controlled_systems/controller_simulation.png" 1758554294 125117 5e5d12cca4bfc7bc4ee60610c04a1783 ""
   "images/phase_portraits/system1_phase_portrait.png" 1758471640 845615 b068d7c0c086c304fc5b83f16e189890 ""
   "images/phase_portraits/system2_phase_portrait.png" 1758471640 789323 a25fbe16ec69177ce478b269748a7fc8 ""
   "images/phase_portraits/system3_phase_portrait.png" 1758471640 1510827 62ded05a970dd7639756d13409bd8584 ""
