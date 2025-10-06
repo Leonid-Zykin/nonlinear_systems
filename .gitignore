@@ -2,3 +2,5 @@
 *.bcf
 *.out
 *.log
+*.run.xml
+*.vscode
