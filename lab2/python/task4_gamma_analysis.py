@@ -32,7 +32,7 @@ def analyze_gamma_condition():
                   [2, 0]])
     B = np.array([[0],
                   [1]])
-    K = np.array([[-14, -7]])
+    K = np.array([[-7.2383, -4.0000]])
     
     print(f"\nМатрицы системы:")
     print(f"A = \n{A}")
