@@ -4,3 +4,7 @@
 *.log
 *.run.xml
 *.vscode
+*.bbl
+*.fls
+*.fdb_latexmk
+*.synctex.gz
