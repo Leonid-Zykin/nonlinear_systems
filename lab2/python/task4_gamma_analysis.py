@@ -60,7 +60,7 @@ def analyze_stability_with_gamma(A, B, K):
     
     print("\nСистема с параметром γ:")
     print("ẋ₁ = x₂ + γ sin x₂")
-    print("ẋ₂ = -12x₁ - 7x₂")
+    print("ẋ₂ = -5.2383x₁ - 4x₂")
     
     return analyze_nonlinear_system()
 
@@ -80,7 +80,7 @@ def analyze_nonlinear_system():
     
     print("Линеаризация в начале координат:")
     print("Матрица Якоби:")
-    print("J = [[0, 1+γ], [-12, -7]]")
+    print("J = [[0, 1+γ], [-4.2383, -4]]")
     
     # Характеристический полином: det(sI - J) = s² - tr(J)s + det(J)
     # tr(J) = 0 + (-7) = -7

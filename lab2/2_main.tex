@@ -416,3 +416,85 @@ ISS относительно шумов измерений и аддитивны
 
 Выполним моделирование системы без шумов и возмущений, с наличием шумов и с наличием аддитивных возмущений.
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{task5/state_without_noise.png}
+\caption{Моделирование замкнутой системы}
+\label{fig:state_without_noise}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{task5/state_measure_noise.png}
+\caption{Моделирование замкнутой системы}
+\label{fig:state_measure_noise}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{task5/state_additive_perturbation.png}
+\caption{Моделирование замкнутой системы}
+\label{fig:state_additive_perturbation}
+\end{figure}
+
+\section*{Задача 6. Анализ устойчивости по отношению к возмущению}
+
+Исследуем устойчивость по входу к состоянию системы по отношению к возмущению $d$.
+
+Рассмотрим систему:
+\begin{align*}
+    \begin{cases}
+        \dot{x}_1 = -2x_1 + x_2, \\
+        \dot{x}_2 = -x_1 - \sigma(x_1) - x_2 + d,
+    \end{cases}
+\end{align*}
+где $\sigma$ - локально липшицева, $\sigma(0)=0$, $y\sigma(y) \le 0$.
+
+Функция Ляпунова:
+\begin{align*}
+    V(x) = \frac{1}{2}x_1^2 + \frac{1}{2}x_2^2
+\end{align*}
+
+Производная функции Ляпунова:
+\begin{align*}
+    \dot{V}(x) &= x_1 \dot{x}_1 + x_2 \dot{x}_2 = \\
+    &= x_1(-2x_1 + x_2) + x_2(-x_1 - \sigma(x_1) - x_2 + d) = \\
+    &= -2x_1^2 - x_2\sigma(x_1) - x_2^2 + x_2d
+\end{align*}
+
+Оценим неопредленные члены:
+\begin{align*}
+    -x_2\sigma(x_1) &\le L|x_1||x_2| \le \frac{L}{2} x_1^2 + \frac{L}{2} x_2^2 \\
+    x_2d &\le \frac{1}{2} x_2^2 + \frac{1}{2} d^2
+\end{align*}
+
+Получим:
+\begin{align*}
+    \dot{V}(x) &= -2x_1^2 - x_2^2 + \frac{L}{2} x_1^2 + \frac{L}{2} x_2^2 + \frac{1}{2} x_2^2 + \frac{1}{2} d^2 = \\
+    &= \left(-2 + \frac{L}{2} \right)x_1^2 + \left(\frac{L}{2} - \frac{1}{2} \right) x_2^2 + \frac{1}{2} d^2
+\end{align*}
+
+Для отрицательности квадратичной формы по $x$ требуется:
+\begin{align*}
+    -2 + \frac{L}{2} < 0, \quad
+    -\frac{1}{2} + \frac{L}{2} < 0
+\end{align*}
+
+При $L<1$ существуют $a_1, a_2 > 0$ такие, что
+\begin{align*}
+    -2 + \frac{L}{2} \le a_1, \quad
+    -\frac{1}{2} + \frac{L}{2} \le a_2
+\end{align*}
+
+Пусть $a = min(a_1, a_2) > 0$, тогда
+\begin{align*}
+    \dot{V}(x) \le -a(x_1^2 + x_2^2) + \frac{1}{2} d^2
+\end{align*}
+
+Учитывая выбранную функцию Ляпунова:
+\begin{align*}
+    \dot{V}(x) \le -2aV + \frac{1}{2} d^2
+\end{align*}
+
+Таким образом, система ISS относительно $d$ при $\dot{V}(x) \le -\alpha V + \gamma(d^2)$,
+где $\alpha=2a>0$, $\gamma=\frac{1}{2}$, $L<1$.

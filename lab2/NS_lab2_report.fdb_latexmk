@@ -1,14 +1,14 @@
 # Fdb version 4
-["biber NS_lab2_report"] 0 "NS_lab2_report.bcf" "NS_lab2_report.bbl" "NS_lab2_report" 1760822013.0089 0
+["biber NS_lab2_report"] 0 "NS_lab2_report.bcf" "NS_lab2_report.bbl" "NS_lab2_report" 1760873234.1416 0
   "NS_lab2_report.bcf" 0 -1 0 "pdflatex"
   "biba.bib" 0 -1 0 ""
   (generated)
   "NS_lab2_report.bbl"
   "NS_lab2_report.blg"
   (rewritten before read)
-["pdflatex"] 1760822009.20943 "c:/Users/alyok/Desktop/nonlinear_systems/lab2/NS_lab2_report.tex" "NS_lab2_report.pdf" "NS_lab2_report" 1760822013.01 0
+["pdflatex"] 1760873230.91252 "c:/Users/alyok/Desktop/nonlinear_systems/lab2/NS_lab2_report.tex" "NS_lab2_report.pdf" "NS_lab2_report" 1760873234.14266 0
   "1_title.tex" 1759782079 1442 30f3e2b39b8ea8c3aec04db3c64da32f ""
-  "2_main.tex" 1760822008 17628 9abb73b3b39dcbe1ac84d799100e1304 ""
+  "2_main.tex" 1760873228 20570 acb197dbb9b3ae4167c511ef6673131e ""
   "C:/Users/alyok/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1758469578 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/alyok/AppData/Local/MiKTeX/fonts/pk/ljfour/lh/lh-t2a/dpi600/labx1440.pk" 1728985001 36852 b7ae18ccb0e37c424904011c06965341 ""
   "C:/Users/alyok/AppData/Local/MiKTeX/fonts/pk/ljfour/lh/lh-t2a/dpi600/larm1200.pk" 1758469601 27028 74330eebd322f52625d6c54c6ef23dc1 ""
@@ -169,14 +169,17 @@
   "C:/Users/alyok/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/alyok/AppData/Local/Programs/MiKTeX/tex/latex/was/icomma.sty" 1665850770 1018 df058db1896806f044e2233bb506d425 ""
   "C:/Users/alyok/AppData/Local/Programs/MiKTeX/tex/latex/xpatch/xpatch.sty" 1585221260 8510 7803f78066c4f9d008405191a4b43073 ""
-  "NS_lab2_report.aux" 1760822011 2295 02cbbc768fbbec1f6984a628d301cbb1 "pdflatex"
+  "NS_lab2_report.aux" 1760873233 3227 a41596732113c7ab6d1509e1e97cf83b "pdflatex"
   "NS_lab2_report.bbl" 0 -1 0 "biber NS_lab2_report"
-  "NS_lab2_report.out" 1760822011 2949 a05343c7c5670a56183f8a08f32f0399 "pdflatex"
-  "NS_lab2_report.run.xml" 1760822011 2633 82cf711f7a964e149eb68672a6df4018 "pdflatex"
+  "NS_lab2_report.out" 1760873233 2949 a05343c7c5670a56183f8a08f32f0399 "pdflatex"
+  "NS_lab2_report.run.xml" 1760873233 2633 82cf711f7a964e149eb68672a6df4018 "pdflatex"
   "NS_lab2_report.tex" 1759782079 18560 12335bfe19640fc1dfa8d7339d6aa6dc ""
   "c:/Users/alyok/Desktop/nonlinear_systems/lab2/NS_lab2_report.tex" 1759782079 18560 12335bfe19640fc1dfa8d7339d6aa6dc ""
   "images/task3/control.png" 1760799750 13680 07c07888781ea361b283ad8d199fe282 ""
   "images/task3/state.png" 1760799712 17302 d3ea7d1fcdf1d27bd39ba92ed730f702 ""
+  "images/task5/state_additive_perturbation.png" 1760870016 23835 c4bb405b75b2b2a86f144822d9574a5b ""
+  "images/task5/state_measure_noise.png" 1760868965 23471 8eead0525c562ab660e753d2f50863d3 ""
+  "images/task5/state_without_noise.png" 1760867372 21322 3e720c328bf4862aa260f5e95a7d50f7 ""
   (generated)
   "NS_lab2_report.aux"
   "NS_lab2_report.bcf"
