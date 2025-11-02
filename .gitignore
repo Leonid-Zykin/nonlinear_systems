@@ -8,3 +8,6 @@
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+*.fdb_latexmk
+*.fls
+*.synctex.gz
