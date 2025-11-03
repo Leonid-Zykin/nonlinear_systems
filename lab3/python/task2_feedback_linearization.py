@@ -87,11 +87,44 @@ def analyze_controllability(f1, f2, f3, g1, g2, g3, x1, x2, x3, u):
     print(f"g = [0, 1, 0]ᵀ")
     print(f"[f, g] = [{adf_g1}, {adf_g2}, {adf_g3}]ᵀ")
     
-    # Матрица управляемости
-    controllability_matrix = np.array([
-        [0, float(adf_g1.subs([(x1, 0), (x2, 0), (x3, 0)])), 0],
-        [1, float(adf_g2.subs([(x1, 0), (x2, 0), (x3, 0)])), 0],
-        [0, float(adf_g3.subs([(x1, 0), (x2, 0), (x3, 0)])), 0]
+    # Второй столбец: [f, [f, g]] = ad_f^2 g
+    # Сначала формируем вектор ad_f g как функции от (x1, x2, x3)
+    adf_g_vec = Matrix([adf_g1, adf_g2, adf_g3])
+
+    # Вычисляем [f, ad_f g] = L_f(ad_f g) - L_{ad_f g}(f)
+    # L_f(ad_f g)
+    Lf_adf_g = Matrix([
+        diff(adf_g_vec[0], x1)*f1 + diff(adf_g_vec[0], x2)*f2 + diff(adf_g_vec[0], x3)*f3,
+        diff(adf_g_vec[1], x1)*f1 + diff(adf_g_vec[1], x2)*f2 + diff(adf_g_vec[1], x3)*f3,
+        diff(adf_g_vec[2], x1)*f1 + diff(adf_g_vec[2], x2)*f2 + diff(adf_g_vec[2], x3)*f3,
+    ])
+
+    # L_{ad_f g}(f)
+    L_adf_g_f = Matrix([
+        diff(f1, x1)*adf_g_vec[0] + diff(f1, x2)*adf_g_vec[1] + diff(f1, x3)*adf_g_vec[2],
+        diff(f2, x1)*adf_g_vec[0] + diff(f2, x2)*adf_g_vec[1] + diff(f2, x3)*adf_g_vec[2],
+        diff(f3, x1)*adf_g_vec[0] + diff(f3, x2)*adf_g_vec[1] + diff(f3, x3)*adf_g_vec[2],
+    ])
+
+    adf2_g_vec = simplify(Lf_adf_g - L_adf_g_f)
+
+    # Подстановка начала координат для столбцов матрицы управляемости
+    g0 = Matrix([0, 1, 0])
+    adf_g0 = Matrix([
+        adf_g1.subs([(x1, 0), (x2, 0), (x3, 0)]),
+        adf_g2.subs([(x1, 0), (x2, 0), (x3, 0)]),
+        adf_g3.subs([(x1, 0), (x2, 0), (x3, 0)])
+    ])
+    adf2_g0 = Matrix([
+        adf2_g_vec[0].subs([(x1, 0), (x2, 0), (x3, 0)]),
+        adf2_g_vec[1].subs([(x1, 0), (x2, 0), (x3, 0)]),
+        adf2_g_vec[2].subs([(x1, 0), (x2, 0), (x3, 0)])
+    ])
+
+    controllability_matrix = np.column_stack([
+        np.array(g0, dtype=float).reshape(3),
+        np.array(adf_g0, dtype=float).reshape(3),
+        np.array(adf2_g0, dtype=float).reshape(3),
     ])
     
     print(f"\nМатрица управляемости в начале координат:")
