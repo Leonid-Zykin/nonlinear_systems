@@ -241,6 +241,24 @@ u = \frac{v - L_f^2 h}{L_g L_f h} = \frac{v - (2x_1 - 2x_2 - x_1 x_3)}{1} = v - 
 u = -2x_1 - 3(-x_1 + x_2) - 2x_1 + 2x_2 + x_1 x_3 = -x_1 - x_2 + x_1 x_3
 \end{equation}
 
+\subsection*{Линеаризация внешней составляющей и нуль-динамика}
+
+Внешние координаты нормальной формы:
+\begin{equation*}
+z_1 = h(x) = x_1,\qquad z_2 = L_f h(x) = -x_1 + x_2.
+\end{equation*}
+Для выбранного управления получаем линейную внешнюю динамику
+\begin{equation*}
+\dot z = A_c z + B_c v, \qquad y = C_c z,
+\end{equation*}
+где
+\begin{equation*}
+A_c = \begin{pmatrix}0 & 1\\ 0 & 0\end{pmatrix},\quad B_c = \begin{pmatrix}0\\1\end{pmatrix},\quad C_c = \begin{pmatrix}1 & 0\end{pmatrix}.
+\end{equation*}
+Нуль-динамика задаётся внутренними координатами при $z\equiv 0$ и имеет вид $\dot \eta = f_0(\eta,0)$, что соответствует внутренним уравнениям системы при $x_1\equiv 0$, $x_2\equiv 0$.
+
+Выбирая $v = -k_1 z_1 - k_2 z_2$ с $k_1,k_2>0$, получаем желаемые собственные значения замкнутой внешней части, а вся система стабилизируется (минимально-фазовость проверена выше).
+
 \subsection*{Моделирование управляемой системы}
 
 \begin{figure}[H]
