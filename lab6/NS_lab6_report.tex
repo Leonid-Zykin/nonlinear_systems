@@ -1,0 +1,112 @@
+% !TEX program = xelatex
+\documentclass[a4paper,14pt,oneside,openany]{memoir}
+
+%%% Базовые настройки верстки %%%
+\usepackage{amsmath}
+\usepackage[left=30mm, right=15mm, top=20mm, bottom=20mm]{geometry}
+\pagestyle{plain}
+\parindent=1.25cm
+\usepackage{indentfirst}
+
+%%% Язык и шрифт %%%
+\usepackage[english, russian]{babel}
+\babelfont{rm}{Times New Roman}
+
+%%% Заголовки %%%
+\setsecnumdepth{subsection}
+\renewcommand*\chapterheadstart{}
+\renewcommand*\printchaptername{}
+\renewcommand*\chapnumfont{\normalfont\bfseries}
+\renewcommand*\afterchapternum{\hspace{1em}}
+\renewcommand*\printchaptertitle{\normalfont\bfseries\centering\MakeUppercase}
+\setbeforesecskip{20pt}
+\setaftersecskip{20pt}
+\setsecheadstyle{\raggedright\normalfont\bfseries}
+\setbeforesubsecskip{20pt}
+\setaftersubsecskip{20pt}
+\setsubsecheadstyle{\raggedright\normalfont\bfseries}
+
+%%% Оглавление %%%
+\addto\captionsrussian{\renewcommand\contentsname{Содержание}}
+\setrmarg{2.55em plus1fil}
+\renewcommand{\aftertoctitle}{\afterchaptertitle \vspace{-\cftbeforechapterskip}}
+\renewcommand*\cftchapternumwidth{1.5em}
+\renewcommand*\cftchapterfont{\normalfont\MakeUppercase}
+\renewcommand*\cftchapterpagefont{\normalfont}
+\renewcommand*\cftchapterdotsep{\cftdotsep}
+\renewcommand*\cftdotsep{1}
+\renewcommand*\cftchapterleader{\cftdotfill{\cftchapterdotsep}}
+\maxtocdepth{subsection}
+
+%%% Выравнивание %%%
+\tolerance 1414
+\hbadness 1414
+\emergencystretch 1.5em
+\hfuzz 0.3pt
+\vfuzz \hfuzz
+\clubpenalty=10000
+\widowpenalty=10000
+\brokenpenalty=4991
+
+%%% Графика %%%
+\usepackage{graphicx, caption, subcaption}
+\graphicspath{{images/}}
+\captionsetup[figure]{font=small, width=\textwidth, name=Рисунок, justification=centering}
+\captionsetup[subfigure]{font=small}
+\captionsetup[table]{singlelinecheck=false,font=small,width=\textwidth,justification=justified}
+\captiondelim{ --- }
+\setkeys{Gin}{width=\textwidth}
+\renewcommand{\thesubfigure}{\asbuk{subfigure}}
+\usepackage[section]{placeins}
+\usepackage{float}
+
+%%% Гиперссылки %%%
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linktoc=all,
+    linktocpage=true,
+    linkcolor=red,
+    citecolor=red
+}
+
+%%% Списки %%%
+\usepackage{enumitem}
+\renewcommand*{\labelitemi}{\normalfont{--}}
+\setlist{noitemsep, leftmargin=*}
+\setlist[1]{labelindent=\parindent}
+\setlist[2]{leftmargin=\parindent}
+\setlist[3]{leftmargin=\parindent}
+
+%%% Нумерация %%%
+\counterwithout{figure}{chapter}
+\counterwithout{equation}{chapter}
+\counterwithout{table}{chapter}
+
+%%% Код %%%
+\usepackage{listings}
+\usepackage{color}
+\definecolor{codegray}{rgb}{0.95,0.95,0.95}
+\lstset{
+  backgroundcolor=\color{codegray},
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  language=Python,
+  showstringspaces=false
+}
+
+\begin{document}
+
+\input{1_title}
+
+\newpage
+\setcounter{page}{2}
+\OnehalfSpacing*
+
+% \tableofcontents*
+
+\input{2_main}
+
+\end{document}
+
