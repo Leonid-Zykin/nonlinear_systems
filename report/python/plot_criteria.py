@@ -5,9 +5,9 @@ from scipy import signal
 plt.rcParams['font.family'] = 'DejaVu Sans'
 plt.rcParams['axes.unicode_minus'] = False
 
-# Система: G(s) = 1 / (s(s+2))
+# Система: G(s) = 1 / ((s+1)(s+2))
 num = [1.0]
-den = [1.0, 2.0, 0.0]
+den = [1.0, 3.0, 2.0]
 sys = signal.lti(num, den)
 
 # Частоты

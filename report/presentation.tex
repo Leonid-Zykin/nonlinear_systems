@@ -177,13 +177,13 @@
 
 \begin{frame}
 \frametitle{Пример: анализ системы}
-\textbf{Линейная часть}: $G(s) = \dfrac{1}{s(s+2)}$
+\textbf{Линейная часть}: $G(s) = \dfrac{1}{(s+1)(s+2)}$
 
 \vspace{10pt}
 В пространстве состояний:
 \begin{equation*}
     \begin{aligned}
-        \dot x_1 &= x_2,\\
+        \dot x_1 &= -x_1 + x_2,\\
         \dot x_2 &= -2x_2 + \varphi(\sigma),\\
         \sigma &= x_1
     \end{aligned}

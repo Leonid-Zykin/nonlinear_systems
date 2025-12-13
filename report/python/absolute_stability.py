@@ -15,14 +15,15 @@ def lurie_rhs(t, x, A, b, c, k):
 
 
 def simulate_time_response():
-    # Линейная часть: G(s) = 1 / (s (s + 2))
-    A = np.array([[0.0, 1.0], [0.0, -2.0]])
+    # Линейная часть: G(s) = 1 / ((s+1)(s+2)) = 1/(s^2 + 3s + 2)
+    # Это дает гурвицеву матрицу A
+    A = np.array([[-1.0, 1.0], [0.0, -2.0]])
     b = np.array([0.0, 1.0])
     c = np.array([1.0, 0.0])
     k_sector = 1.0
 
     x0 = np.array([0.8, -0.6])
-    t_span = (0.0, 12.0)
+    t_span = (0.0, 10.0)
     t_eval = np.linspace(*t_span, 800)
 
     sol = solve_ivp(
@@ -44,9 +45,9 @@ def simulate_time_response():
 
 
 def plot_nyquist_popov():
-    # G(s) = 1 / (s (s + 2))
+    # G(s) = 1 / ((s+1)(s+2)) = 1/(s^2 + 3s + 2)
     num = [1.0]
-    den = [1.0, 2.0, 0.0]
+    den = [1.0, 3.0, 2.0]
     sys = signal.lti(num, den)
 
     w = np.logspace(-2, 2, 500)
