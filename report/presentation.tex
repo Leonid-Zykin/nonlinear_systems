@@ -15,12 +15,14 @@
 
 \theoremstyle{definition}
 \newtheorem{defn}{Определение}
+\theoremstyle{plain}
+\newtheorem*{theorem}{}
 
 \title{Абсолютная устойчивость}
-\subtitle{Проблема Лурье и критерии устойчивости}
-\author{Зыкин Л. В., Алехова М. С., Кисиков Д. С.}
+
+\author{Зыкин Л. В., Алёхова М. С., Кисиков Д. С.}
 \institute{Университет ИТМО \\ Факультет систем управления и робототехники}
-\date{2025}
+\date{}
 
 \begin{document}
 
@@ -38,12 +40,7 @@
 \begin{itemize}
     \item \textbf{Задача}: гарантировать устойчивость системы с \emph{неопределённой} нелинейностью
     \item \textbf{Идея}: задать класс допустимых нелинейностей и обеспечить устойчивость для \textbf{всех} функций из этого класса
-    \item \textbf{История}:
-    \begin{itemize}
-        \item 1944: А. И. Лурье сформулировал проблему
-        \item 1957: В. М. Попов предложил частотный критерий
-        \item 1960-е: Р. Калман и В. А. Якубович — лемма КЯП
-    \end{itemize}
+    
 \end{itemize}
 
 \vspace{10pt}
@@ -57,7 +54,7 @@
 \begin{enumerate}
     \item Нулевое решение $x=0$ глобально асимптотически устойчиво
     \item Для \emph{всех} функций $\varphi\in\Phi$ и любых начальных условий
-    \item Решение $x(t)\to 0$ при $t\to\infty$
+    Решение $x(t)\to 0$ при $t\to\infty$
 \end{enumerate}
 \end{defn}
 
@@ -95,7 +92,7 @@
 
 \begin{frame}
 \frametitle{Секторные ограничения}
-\begin{defn}[Сектор $[k_1, k_2]$]
+\begin{defn}
 Функция $\varphi:\mathbb{R}\to\mathbb{R}$ принадлежит сектору $[k_1, k_2]$, если:
 \begin{equation*}
     k_1\sigma^2 \le \varphi(\sigma)\sigma \le k_2\sigma^2, \quad \forall \sigma\in\mathbb{R}, \quad \varphi(0)=0
@@ -116,14 +113,20 @@
 \section{Критерии абсолютной устойчивости}
 
 \begin{frame}
+\frametitle{Секторные ограничения (иллюстрация)}
+\centering
+\includegraphics[width=0.8\textwidth]{images/sector_constraints.png}
+\end{frame}
+
+\begin{frame}
 \frametitle{Круговой критерий}
 \begin{theorem}[Круговой критерий]
 Система абсолютно устойчива в секторе $[0, k]$, если:
-\begin{enumerate}
+\begin{itemize}
     \item Матрица $A$ гурвицева
     \item Найквист-диаграмма $G(j\omega)$ не охватывает точку $(-1/k, 0)$
     \item Эквивалентно: $\Re\{G(j\omega)\} > -1/k$ для всех $\omega$
-\end{enumerate}
+\end{itemize}
 \end{theorem}
 
 \vspace{10pt}
@@ -160,7 +163,7 @@
 \end{equation*}
 \end{theorem}
 
-\vspace{10pt}
+\vspace{8pt}
 \textbf{Преимущества LMI-формулировки}:
 \begin{itemize}
     \item Эффективная численная проверка (SDP)
@@ -211,25 +214,6 @@
 \vspace{-5pt}
 \small Переходный процесс
 \end{columns}
-\end{frame}
-
-\section{Выводы}
-
-\begin{frame}
-\frametitle{Выводы}
-\begin{itemize}
-    \item \textbf{Робастность}: устойчивость для всего класса нелинейностей без знания их точной формы
-    
-    \item \textbf{Критерии}:
-    \begin{itemize}
-        \item Частотные (круговой, Попова) — геометрическая интерпретация
-        \item LMI (КЯП) — численная проверка
-    \end{itemize}
-    
-    \item \textbf{Применение}: системы с ограничениями, робастное управление, адаптивные системы
-    
-    \item \textbf{Ключевой фактор}: корректное определение сектора нелинейности
-\end{itemize}
 \end{frame}
 
 \begin{frame}

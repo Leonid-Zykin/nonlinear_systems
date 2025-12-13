@@ -3,5 +3,4 @@
 \beamer@sectionintoc {2}{Постановка задачи}{5}{0}{2}
 \beamer@sectionintoc {3}{Классы нелинейностей}{6}{0}{3}
 \beamer@sectionintoc {4}{Критерии абсолютной устойчивости}{7}{0}{4}
-\beamer@sectionintoc {5}{Пример}{10}{0}{5}
-\beamer@sectionintoc {6}{Выводы}{12}{0}{6}
+\beamer@sectionintoc {5}{Пример}{11}{0}{5}
