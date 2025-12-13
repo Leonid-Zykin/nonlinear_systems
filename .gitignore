@@ -13,3 +13,6 @@
 *.synctex.gz
 *.gz
 *.blg
+*.snm
+*.nav
+*.toc
