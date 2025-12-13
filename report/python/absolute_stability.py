@@ -81,31 +81,102 @@ def plot_nyquist_popov():
     print(f"Сохранено: {out_path}")
 
 
-def plot_time_response():
-    t, x1, x2, sigma, phi = simulate_time_response()
-    fig, ax = plt.subplots(2, 2, figsize=(12, 8))
+def phi_linear_large(s, k=3.0):
+    """Линейная нелинейность с большим усилением k - нарушает условия абсолютной устойчивости."""
+    return k * s  # Линейная функция, не насыщение
 
-    ax[0, 0].plot(t, x1, label="x1")
-    ax[0, 0].plot(t, x2, label="x2")
-    ax[0, 0].set_title("Состояния x1, x2")
+
+def lurie_rhs_unstable(t, x, A, b, c, k):
+    sigma = float(np.dot(c, x))
+    return A @ x + b * phi_linear_large(sigma, k=k)
+
+
+def simulate_unstable():
+    """Система с нелинейностью вне сектора [0,1] - нестабильна."""
+    A = np.array([[-1.0, 1.0], [0.0, -2.0]])
+    b = np.array([0.0, 1.0])
+    c = np.array([1.0, 0.0])
+    k_sector = 3.0  # Большое усиление, нарушает критерии
+
+    x0 = np.array([0.5, -0.3])  # Меньшие начальные условия для наглядности
+    t_span = (0.0, 8.0)
+    t_eval = np.linspace(*t_span, 800)
+
+    sol = solve_ivp(
+        lurie_rhs_unstable,
+        t_span,
+        x0,
+        t_eval=t_eval,
+        args=(A, b, c, k_sector),
+        rtol=1e-7,
+        atol=1e-9,
+        max_step=0.05,
+    )
+
+    t = sol.t
+    x1, x2 = sol.y
+    sigma = c[0] * x1 + c[1] * x2
+    phi = phi_linear_large(sigma, k=k_sector)
+    return t, x1, x2, sigma, phi
+
+
+def plot_time_response():
+    # Устойчивый случай: нелинейность в секторе [0,1]
+    t_stable, x1_stable, x2_stable, sigma_stable, phi_stable = simulate_time_response()
+    
+    # Нестабильный случай: нелинейность вне сектора [0,1]
+    t_unstable, x1_unstable, x2_unstable, sigma_unstable, phi_unstable = simulate_unstable()
+    
+    fig, ax = plt.subplots(2, 2, figsize=(14, 10))
+
+    # Верхний ряд: устойчивый случай
+    ax[0, 0].plot(t_stable, x1_stable, label="x₁", linewidth=2)
+    ax[0, 0].plot(t_stable, x2_stable, label="x₂", linewidth=2)
+    ax[0, 0].set_title("Устойчивый случай: φ(σ) ∈ [0,1] (насыщение)")
+    ax[0, 0].set_xlabel("Время t")
+    ax[0, 0].set_ylabel("Состояние")
     ax[0, 0].grid(True, alpha=0.3)
     ax[0, 0].legend()
+    ax[0, 0].axhline(y=0, color='k', linestyle='--', alpha=0.3)
 
-    ax[0, 1].plot(t, sigma, label="σ = cᵀx")
-    ax[0, 1].plot(t, phi, label="φ(σ)")
-    ax[0, 1].set_title("Сигнал σ и нелинейность φ(σ)")
+    ax[0, 1].plot(t_stable, sigma_stable, label="σ = cᵀx", linewidth=2)
+    ax[0, 1].plot(t_stable, phi_stable, label="φ(σ) = sat(σ)", linewidth=2)
+    ax[0, 1].set_title("Сигнал σ и нелинейность φ(σ) (устойчиво)")
+    ax[0, 1].set_xlabel("Время t")
+    ax[0, 1].set_ylabel("Значение")
     ax[0, 1].grid(True, alpha=0.3)
     ax[0, 1].legend()
+    ax[0, 1].axhline(y=0, color='k', linestyle='--', alpha=0.3)
 
-    ax[1, 0].plot(x1, x2)
-    ax[1, 0].set_title("Фазовый портрет")
-    ax[1, 0].set_xlabel("x1")
-    ax[1, 0].set_ylabel("x2")
+    # Нижний ряд: нестабильный случай
+    # Ограничиваем масштаб для наглядности
+    mask = np.abs(x1_unstable) < 10
+    t_unstable_plot = t_unstable[mask] if len(mask) < len(t_unstable) else t_unstable
+    x1_unstable_plot = x1_unstable[mask] if len(mask) < len(x1_unstable) else x1_unstable
+    x2_unstable_plot = x2_unstable[mask] if len(mask) < len(x2_unstable) else x2_unstable
+    sigma_unstable_plot = sigma_unstable[mask] if len(mask) < len(sigma_unstable) else sigma_unstable
+    phi_unstable_plot = phi_unstable[mask] if len(mask) < len(phi_unstable) else phi_unstable
+    
+    ax[1, 0].plot(t_unstable_plot, x1_unstable_plot, label="x₁", linewidth=2, color='r')
+    ax[1, 0].plot(t_unstable_plot, x2_unstable_plot, label="x₂", linewidth=2, color='orange')
+    ax[1, 0].set_title("Нестабильный случай: φ(σ) = 3σ (нарушает сектор [0,1])")
+    ax[1, 0].set_xlabel("Время t")
+    ax[1, 0].set_ylabel("Состояние")
     ax[1, 0].grid(True, alpha=0.3)
+    ax[1, 0].legend()
+    ax[1, 0].axhline(y=0, color='k', linestyle='--', alpha=0.3)
+    if len(mask) < len(t_unstable):
+        ax[1, 0].text(0.5, 0.95, 'Система расходится!', transform=ax[1, 0].transAxes, 
+                     ha='center', va='top', bbox=dict(boxstyle='round', facecolor='yellow', alpha=0.7))
 
-    ax[1, 1].plot(t, np.sqrt(x1 ** 2 + x2 ** 2))
-    ax[1, 1].set_title("Норма состояния ||x||")
+    ax[1, 1].plot(t_unstable_plot, sigma_unstable_plot, label="σ = cᵀx", linewidth=2, color='r')
+    ax[1, 1].plot(t_unstable_plot, phi_unstable_plot, label="φ(σ) = 3σ", linewidth=2, color='orange')
+    ax[1, 1].set_title("Сигнал σ и нелинейность φ(σ) (нестабильно)")
+    ax[1, 1].set_xlabel("Время t")
+    ax[1, 1].set_ylabel("Значение")
     ax[1, 1].grid(True, alpha=0.3)
+    ax[1, 1].legend()
+    ax[1, 1].axhline(y=0, color='k', linestyle='--', alpha=0.3)
 
     plt.tight_layout()
     out_path = "../images/time_response.png"
