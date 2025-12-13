@@ -186,6 +186,13 @@ isbn=false,                                         % Не показывать 
   showstringspaces=false
 }
 
+%%% Определения окружений для теорем и определений %%%
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}[chapter]
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}[chapter]
+
 \begin{document}
 
 \input{1_title}                                     % Титульник
